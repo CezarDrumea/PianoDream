@@ -219,7 +219,8 @@ main .explore .more-btn {
 }
 
 .color-light {
-  outline: solid black 2px;
+  -webkit-box-shadow: 0 0 0 2px black;
+          box-shadow: 0 0 0 2px black;
 }
 
 .inner-light {
@@ -277,7 +278,8 @@ main .explore .more-btn {
 }
 
 .color-dark {
-  outline: solid white 2px;
+  -webkit-box-shadow: 0 0 0 2px white;
+          box-shadow: 0 0 0 2px white;
 }
 
 .inner-dark {

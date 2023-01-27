@@ -216,7 +216,7 @@ main {
 }
 
 .color-light {
-  outline: solid black 2px;
+  box-shadow: 0 0 0 2px black;
 }
 
 .inner-light {
@@ -276,7 +276,7 @@ main {
 }
 
 .color-dark {
-  outline: solid white 2px;
+  box-shadow: 0 0 0 2px white;
 }
 
 .inner-dark {
