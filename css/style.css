@@ -18,8 +18,8 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 header nav {
@@ -35,6 +35,8 @@ header nav {
   position: fixed;
   min-width: 100vw;
   top: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 header nav .logo-btn {
   height: calc(50 * clamp(1px, 0.25vw, 1.5px));
@@ -42,8 +44,8 @@ header nav .logo-btn {
   margin: calc(10 * clamp(1px, 0.25vw, 1.5px));
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 header nav .logo-btn:hover {
   height: calc(55 * clamp(1px, 0.25vw, 1.5px));
@@ -74,6 +76,8 @@ header nav .options .languages {
           align-items: center;
   gap: calc(5 * clamp(1px, 0.25vw, 1.5px));
   font-weight: 600;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 header nav .options .languages .lang {
   display: -webkit-box;
@@ -87,8 +91,6 @@ header nav .options .languages .lang {
           align-items: center;
   text-decoration: none;
   font-size: calc(14 * clamp(1px, 0.25vw, 1.5px));
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   color: inherit;
 }
 header nav .options .languages .lang:hover {
@@ -104,14 +106,16 @@ header nav .options .color-mode-btn {
   border-radius: 50%/100%;
   cursor: pointer;
   overflow: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 header nav .options .color-mode-btn .color-mode-inner {
   position: relative;
   width: calc(12 * clamp(1px, 0.25vw, 1.5px));
   height: calc(12 * clamp(1px, 0.25vw, 1.5px));
   border-radius: 50%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 header nav .options .color-mode-btn .color-mode-inner.active {
   -webkit-transform: translateX(calc(14 * clamp(1px, 0.25vw, 1.5px)));
@@ -133,13 +137,15 @@ main .explore {
   margin: auto;
   padding: clamp(10px, 2.5vw, 22px) clamp(20px, 3.5vw, 32px) clamp(20px, 3.5vw, 32px) clamp(20px, 3.5vw, 32px);
   border-radius: clamp(10px, 2vw, 20px);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 main .explore .piano-dream {
   font-family: "Lobster";
   font-size: clamp(36px, 10vw, 56px);
   text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 main .explore .socials {
   display: -webkit-box;
@@ -152,8 +158,8 @@ main .explore .socials {
 main .explore .socials .network {
   height: clamp(30px, 7vw, 50px);
   width: clamp(30px, 7vw, 50px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 main .explore .socials .network:hover {
   height: clamp(36px, 8.4vw, 60px);
@@ -172,8 +178,8 @@ main .explore .more-btn {
   padding: clamp(5px, 1.5vw, 15px);
   border-radius: clamp(10px, 2vw, 20px);
   margin-top: clamp(14px, 3vw, 30px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .body-light {
@@ -309,9 +315,9 @@ main .explore .more-btn {
   text-decoration: none;
   font-size: calc(14 * clamp(1px, 0.25vw, 1.5px));
   font-weight: 600;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   color: inherit;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 .nav-elements a:hover {
   font-size: calc(16 * clamp(1px, 0.25vw, 1.5px));
@@ -335,9 +341,9 @@ main .explore .more-btn {
   width: calc(25 * clamp(1px, 0.25vw, 1.5px));
   height: calc(3 * clamp(1px, 0.25vw, 1.5px));
   margin: calc(5 * clamp(1px, 0.25vw, 1.5px)) auto;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   border-radius: calc(3 * clamp(1px, 0.25vw, 1.5px));
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 @media (max-width: 800px) {

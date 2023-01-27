@@ -41,7 +41,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 header {
@@ -50,6 +50,7 @@ header {
     position: fixed;
     min-width: 100vw;
     top: 0;
+    transition: 0.6s;
 
     .logo-btn {
       height: calc(50 * $clampGrow);
@@ -57,7 +58,7 @@ header {
       margin: calc(10 * $clampGrow);
       background-repeat: no-repeat;
       background-size: contain;
-      transition: 0.5s;
+      transition: 0.6s;
 
       &:hover {
         height: calc(55 * $clampGrow);
@@ -74,12 +75,12 @@ header {
         @include displayFlex();
         gap: calc(5 * $clampGrow);
         font-weight: 600;
+        transition: 0.6s;
         
         .lang {
           @include displayFlex();
           text-decoration: none;
           font-size: calc(14 * $clampGrow);
-          transition: 0.5s;
           color: inherit;
 
           &:hover {
@@ -99,13 +100,14 @@ header {
         border-radius: 50% / 100%;
         cursor: pointer;
         overflow: hidden;
+        transition: 0.6s;
 
         .color-mode-inner {
           position: relative;
           width: calc(12 * $clampGrow);
           height: calc(12 * $clampGrow);
           border-radius: 50%;
-          transition: 0.5s;
+          transition: 0.6s;
 
           &.active {
             transform: translateX(calc(14 * $clampGrow));
@@ -130,12 +132,13 @@ main {
     margin: auto;
     padding: clamp(10px, 2.5vw, 22px) $clampPadding $clampPadding $clampPadding;
     border-radius: clamp(10px, 2vw, 20px);
+    transition: 0.6s;
 
     .piano-dream {
       font-family: "Lobster";
       font-size: clamp(36px, 10vw, 56px);
       text-align: center;
-      transition: 0.5s;
+      transition: 0.6s;
     }
 
     .socials {
@@ -146,7 +149,7 @@ main {
       .network {
         height: $clampIcon;
         width: $clampIcon;
-        transition: 0.5s;
+        transition: 0.6s;
         
         &:hover {
           height: $clampIconHover;
@@ -160,14 +163,13 @@ main {
       margin: auto;
       text-align: center;
       text-decoration: none;
-      
       width: fit-content;
       font-weight: bold;
       font-size: clamp(12px, 3vw, 18px);
       padding: clamp(5px, 1.5vw, 15px);
       border-radius: clamp(10px, 2vw, 20px);
       margin-top: clamp(14px, 3vw, 30px);
-      transition: 0.5s;
+      transition: 0.6s;
     }
   }
 }
@@ -302,8 +304,8 @@ main {
     text-decoration: none;
     font-size: calc(14 * $clampGrow);
     font-weight: 600;
-    transition: 0.5s;
     color: inherit;
+    transition: 0.6s;
     
     &:hover {
       font-size: calc(16 * $clampGrow);
@@ -332,8 +334,8 @@ main {
     width: calc(25 * $clampGrow);
     height: calc(3 * $clampGrow);
     margin: calc(5 * $clampGrow) auto;
-    transition: 0.5s ease-in-out;
     border-radius: calc(3 * $clampGrow);
+    transition: 0.6s;
   }
 }
 
