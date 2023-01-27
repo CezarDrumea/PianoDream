@@ -101,7 +101,7 @@ header nav .options .color-mode-btn {
   width: calc(30 * clamp(1px, 0.25vw, 1.5px));
   height: calc(16 * clamp(1px, 0.25vw, 1.5px));
   padding: calc(2 * clamp(1px, 0.25vw, 1.5px));
-  border-radius: calc(10 * clamp(1px, 0.25vw, 1.5px));
+  border-radius: 50%/100%;
   cursor: pointer;
   overflow: hidden;
 }
