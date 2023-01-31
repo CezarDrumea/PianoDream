@@ -1,7 +1,7 @@
 $clampPadding: clamp(20px, 3.5vw, 32px);
-$clampIcon: clamp(30px, 7vw, 50px);
-$clampIconHover: clamp(36px, 8.4vw, 60px);
-$clampGrow: clamp(1px, 0.25vw, 1.5px);
+$clampIcon: clamp(40px, 10vw, 60px);
+$clampIconHover: clamp(44px, 11vw, 66px);
+$clampGrow: clamp(1.2px, 0.25vw, 1.8px);
 
 
 @mixin blurBlack {
@@ -51,6 +51,7 @@ header {
     min-width: 100vw;
     top: 0;
     transition: 0.6s;
+    overflow: hidden;
 
     .logo-btn {
       height: calc(50 * $clampGrow);
@@ -61,8 +62,7 @@ header {
       transition: 0.6s;
 
       &:hover {
-        height: calc(55 * $clampGrow);
-        width: calc(66 * $clampGrow);
+        transform: scale(1.1);
       }
     }
 
@@ -73,7 +73,7 @@ header {
 
       .languages {
         @include displayFlex();
-        gap: calc(5 * $clampGrow);
+        gap: calc(6 * $clampGrow);
         font-weight: 600;
         
         .lang {
@@ -84,7 +84,7 @@ header {
           transition: 0.6s;
 
           &:hover {
-            font-size: calc(16 * $clampGrow);
+            transform: scale(1.1);
           }
         }
 
@@ -94,6 +94,8 @@ header {
       }
 
       .color-mode-btn {
+        display: flex;
+        align-items: center;
         width: calc(30 * $clampGrow);
         height: calc(16 * $clampGrow);
         padding: calc(2 * $clampGrow);
@@ -103,7 +105,6 @@ header {
         transition: 0.6s;
 
         .color-mode-inner {
-          position: relative;
           width: calc(12 * $clampGrow);
           height: calc(12 * $clampGrow);
           border-radius: 50%;
@@ -136,7 +137,7 @@ main {
 
     .piano-dream {
       font-family: "Lobster";
-      font-size: clamp(36px, 10vw, 56px);
+      font-size: clamp(40px, 10vw, 60px);
       text-align: center;
       transition: 0.6s;
     }
@@ -152,8 +153,7 @@ main {
         transition: 0.6s;
         
         &:hover {
-          height: $clampIconHover;
-          width: $clampIconHover;
+          transform: scale(1.1);
         }
       }
     }
@@ -165,8 +165,8 @@ main {
       text-decoration: none;
       width: fit-content;
       font-weight: bold;
-      font-size: clamp(12px, 3vw, 18px);
-      padding: clamp(5px, 1.5vw, 15px);
+      font-size: clamp(14px, 3vw, 20px);
+      padding: clamp(8px, 1.5vw, 18px);
       border-radius: clamp(10px, 2vw, 20px);
       margin-top: clamp(14px, 3vw, 30px);
       transition: 0.6s;
@@ -222,7 +222,7 @@ main {
 }
 
 .inner-light {
-  background-color: black;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z'/%3E%3C/svg%3E");
 }
 
 .nav-el-light {
@@ -282,7 +282,7 @@ main {
 }
 
 .inner-dark {
-  background-color: white;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' class='bi bi-moon-stars-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z'/%3E%3Cpath d='M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z'/%3E%3C/svg%3E");
 }
 
 .nav-el-dark {
@@ -308,7 +308,7 @@ main {
     transition: 0.6s;
     
     &:hover {
-      font-size: calc(16 * $clampGrow);
+      transform: scale(1.1);
     }
   }
 }
@@ -320,26 +320,16 @@ main {
   left: 50%;
   margin-left: calc(-12.5 * $clampGrow);
 
-  &:hover {
-    .bar {
-      width: calc(27.5 * $clampGrow);
-      height: calc(3.3 * $clampGrow);
-      margin: calc(5.5 * $clampGrow) auto;
-      border-radius: calc(3.3 * $clampGrow);
-    }
-  }
-
   .bar {
-    display: block;
     width: calc(25 * $clampGrow);
-    height: calc(3 * $clampGrow);
-    margin: calc(5 * $clampGrow) auto;
+    height: calc(4 * $clampGrow);
+    margin: calc(3 * $clampGrow) auto;
     border-radius: calc(3 * $clampGrow);
     transition: 0.6s;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .hamburger {
     display: block;
   }
