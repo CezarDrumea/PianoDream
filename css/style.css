@@ -14,8 +14,17 @@
   font-family: "Nunito";
 }
 
+html {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+}
+
 body {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: 0.6s;

@@ -13,17 +13,26 @@ $(document).ready(function () {
     $(".nav-elements").toggleClass("nav-el-dark").toggleClass("nav-el-light");
     $(".bar").toggleClass("bar-dark").toggleClass("bar-light");
     $(".title-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png");
+    $("")
   });
 });
 
 $.fn.toggleAttrVal = function (attr, val1, val2) {
   const test = $(this).attr(attr);
   if (test === val1) {
-    $(this).attr(attr, val2);
-    return this;
+    return $(this).attr(attr, val2);
   }
   if (test === val2) {
-    $(this).attr(attr, val1);
-    return this;
+    return $(this).attr(attr, val1);
   }
 };
+
+$.fn.toggleCSSpropertyValue = function (attr, propertyName, val1, val2) {
+  const test = $(this).attr(attr).css(propertyName);
+  if (test === val1) {
+    return $(this).attr(attr).css(propertyName, val2);
+  }
+  if (test === val2) {
+    return $(this).attr(attr).css(propertyName, val1);
+  }
+}
