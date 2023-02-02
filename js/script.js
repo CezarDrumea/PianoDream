@@ -10,7 +10,7 @@ $(document).ready(function () {
     $(".more-btn").toggleClass("more-dark").toggleClass("more-light");
     $(".color-mode-btn").toggleClass("color-dark").toggleClass("color-light");
     $(".color-mode-inner").toggleClass("inner-dark").toggleClass("inner-light");
-    $(".nav-elements").toggleClass("nav-el-dark").toggleClass("nav-el-light");
+    $(".nav-elements, .nav-elements-mobile").toggleClass("nav-el-dark").toggleClass("nav-el-light");
     $(".bar").toggleClass("bar-dark").toggleClass("bar-light");
     $(".title-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png");
     $("")
