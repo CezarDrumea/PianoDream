@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $(".color-mode-btn").click(function () {
+$(document).ready(function() {
+  $(".color-mode-btn").click(function() {
     $(".color-mode-inner").toggleClass("active");
     $("body").toggleClass("body-dark").toggleClass("body-light");
     $("nav, .explore").toggleClass("dark-blur").toggleClass("light-blur");
@@ -10,12 +10,23 @@ $(document).ready(function () {
     $(".more-btn").toggleClass("more-dark").toggleClass("more-light");
     $(".color-mode-btn").toggleClass("color-dark").toggleClass("color-light");
     $(".color-mode-inner").toggleClass("inner-dark").toggleClass("inner-light");
-    $(".nav-elements, .nav-elements-mobile").toggleClass("nav-el-dark").toggleClass("nav-el-light");
+    $(".nav-elements").toggleClass("nav-el-dark").toggleClass("nav-el-light");
     $(".bar").toggleClass("bar-dark").toggleClass("bar-light");
     $(".title-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png");
-    $("")
   });
+
+  $(".hamburger").click(function () {
+    $(".mobile").toggle(600);
+  })
+
+  $(window).resize(function() {
+    if ($(this).width() > 951) {
+      $(".mobile").css("display", "none")
+    }
+  })
 });
+
+
 
 $.fn.toggleAttrVal = function (attr, val1, val2) {
   const test = $(this).attr(attr);
@@ -26,13 +37,3 @@ $.fn.toggleAttrVal = function (attr, val1, val2) {
     return $(this).attr(attr, val1);
   }
 };
-
-$.fn.toggleCSSpropertyValue = function (attr, propertyName, val1, val2) {
-  const test = $(this).attr(attr).css(propertyName);
-  if (test === val1) {
-    return $(this).attr(attr).css(propertyName, val2);
-  }
-  if (test === val2) {
-    return $(this).attr(attr).css(propertyName, val1);
-  }
-}
