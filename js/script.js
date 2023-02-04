@@ -1,4 +1,4 @@
-localStorage.clear();
+// localStorage.clear();
 $(document).ready(function() {
   if (localStorage.getItem("inner-active") !== null) {
     if (localStorage.getItem("inner-active") === "active") {
