@@ -1,8 +1,10 @@
 $(document).ready(function() {
-  if (localStorage.getItem("inner") === null) {
-    $(".color-mode-inner").removeClass("active");
-  } else {
-    $(".color-mode-inner").addClass("active");
+  if (localStorage.getItem("inner-active") !== null) {
+    if (localStorage.getItem("inner-active") === "active") {
+      $(".color-mode-inner").addClass("active");
+    } else {
+      $(".color-mode-inner").removeClass("active");
+    }
   }
   $("body").useItemsLocalStorage("body-dark", "body-light", "body");
   $("nav, .explore").useItemsLocalStorage("dark-blur", "light-blur", "blur")
@@ -22,9 +24,9 @@ $(document).ready(function() {
   $(".color-mode-btn").click(function() {
     $(".color-mode-inner").toggleClass("active");
     if ($(".color-mode-inner").hasClass("active")) {
-      localStorage.setItem("inner", "active");
+      localStorage.setItem("inner-active", "active");
     } else {
-      localStorage.setItem("inner", null);
+      localStorage.setItem("inner-active", "not-active");
     }
     $("body").toggleDarkLight("body-dark", "body-light", "body");
     $("nav, .explore").toggleDarkLight("dark-blur", "light-blur", "blur")
