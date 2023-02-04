@@ -4,64 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link class="meta-logo" rel="icon" type="image/png" href="img/logo/pianodream-logo-black.png" />
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      class="meta-logo"
+      rel="icon"
+      type="image/png"
+      href="img/logo/pianodream-logo-black.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Piano Dream</title>
   </head>
-  <body class="body-light">
-    <header>
-      <nav class="light-blur">
-        <div class="nav-pc">
-          <a class="logo-btn logo-light" href=""></a>
-          <div class="hamburger">
-            <div class="bar bar-light"></div>
-            <div class="bar bar-light"></div>
-            <div class="bar bar-light"></div>
-          </div>
-          <!-- nav-elements for PC -->
-          <div class="nav-elements pc nav-el-light">
-            <a href="index.html">Acasă</a>
-            <a href="">Despre</a>
-            <a href="">Prețuri</a>
-            <a href="">Înregistrare</a>
-            <a href="">Contacte</a>
-          </div>
-          <!-- ------------------------ -->
-          <div class="options">
-            <div class="languages light-text">
-              <a href="" class="lang lang-1">RU</a>
-              <a href="" class="lang lang-2">EN</a>
-              <a href="" class="lang lang-3 hide">RO</a>
-            </div>
-            <div class="color-mode-btn color-light">
-              <div class="color-mode-inner inner-light"></div>
-            </div>
-          </div>
+  <body>
+    <nav class="light-blur">
+      <div class="nav-pc">
+        <a class="logo-btn logo-light" href="#acasa"></a>
+        <div class="hamburger">
+          <div class="bar bar-light"></div>
+          <div class="bar bar-light"></div>
+          <div class="bar bar-light"></div>
         </div>
         <!-- nav-elements for PC -->
-        <div class="nav-elements mobile nav-el-light">
-          <div class="mobile-nav-flex">
-            <a href="index.html">Acasă</a>
-            <a href="">Despre</a>
-            <a href="">Prețuri</a>
-            <a href="">Înregistrare</a>
-            <a href="">Contacte</a>
-          </div>
+        <div class="nav-elements pc nav-el-light">
+          <a href="#acasa">Acasă</a>
+          <a href="#despre">Despre</a>
+          <a href="">Prețuri</a>
+          <a href="">Înregistrare</a>
+          <a href="">Contacte</a>
         </div>
         <!-- ------------------------ -->
-      </nav>
-    </header>
-    <main>
+        <div class="options">
+          <div class="languages light-text">
+            <a href="" class="lang lang-1">RU</a>
+            <a href="" class="lang lang-2">EN</a>
+            <a href="" class="lang lang-3 hide">RO</a>
+          </div>
+          <div class="color-mode-btn color-light">
+            <div class="color-mode-inner inner-light"></div>
+          </div>
+        </div>
+      </div>
+      <!-- nav-elements for mobile -->
+      <div class="nav-elements mobile nav-el-light">
+        <div class="mobile-nav-flex">
+          <a href="#acasa">Acasă</a>
+          <a href="#despre">Despre</a>
+          <a href="">Prețuri</a>
+          <a href="">Înregistrare</a>
+          <a href="">Contacte</a>
+        </div>
+      </div>
+      <!-- ------------------------ -->
+    </nav>
+    <!-- Acasa -->
+    <div class="home home-light" id="acasa">
       <div class="explore light-blur">
         <h1 class="piano-dream light-text">Piano Dream</h1>
         <div class="socials">
           <a href="" class="facebook-btn fb-light network"></a>
           <a href="" class="instagram-btn ig-light network"></a>
         </div>
-        <a href="" class="more-btn more-light">Află mai mult</a>
+        <a href="#despre" class="more-btn more-light">Află mai mult</a>
       </div>
-    <footer></footer>
+    </div>
+    <!-- Despre -->
+    <div class="about about-light" id="despre">
+      <div class="about-text light-text">
+        <h2>Ce este Piano Dream?</h2>
+        <p><span>Piano Dream</span> este o școală de muzică care se specializează în lecții individuale de pian. Scopul nostru este să ajutăm elevii de toate vârstele să-și realizeze potențialul muzical și să-și dezvolte abilitățile pianistice. Profesorii noștri experimentați oferă lecții personalizate care se potrivesc nevoilor și obiectivelor unice ale fiecărui elev. La Piano Dream, credem că învățarea muzicii este un drum de viață, fapt pentru care suntem dedicați ajutorului elevilor să-și atingă visul de a cânta la pian. Vino să te alături nouă și să experimentezi bucuria de a cânta la pian aici la Piano Dream!</p>
+        <br>
+        <h2>Ce veți învăța aici?</h2>
+        <p>La <span>Piano Dream</span> veți învăța tehnicile de bază ale interpretării la pian, inclusiv poziția corectă a mâinilor și a corpului, folosirea pedalelor și citirea partiturilor. De asemenea, veți învăța teorie muzicală, solfegiu și arta interpretativă. Veți învăța să cântați melodii de diferite genuri și să vă perfecționați interpretarea prin exerciții practice regulate și feedback-ul profesorilor.</p>
+        <br>
+        <h2>De ce să alegeți Piano Dream?</h2>
+        <p><span>Piano Dream</span> știe să-și aleagă profesorii!. În viziunea noastră, un bun profesor de pian este un profesor devotat muzicii, care poate transimite pasiunea pentru muzică elevilor săi. De asemenea, un bun profesor de pian este un muzician talentat, care poate demonstra tehnicile și stilurile pianistice prin propria sa interpretare. În plus, un bun profesor de pian ar trebui să fie un motivator și un sprijin pentru elevii săi, ajutându-i să atingă obiectivele lor muzicale.</p>
+      </div>
+    </div>
+    <!-- Preturi -->
+
     <script src="js/script.js"></script>
   </body>
 </html>

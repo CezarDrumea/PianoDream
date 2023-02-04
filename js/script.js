@@ -1,3 +1,4 @@
+// localStorage.clear();
 $(document).ready(function() {
   if (localStorage.getItem("inner-active") !== null) {
     if (localStorage.getItem("inner-active") === "active") {
@@ -6,9 +7,9 @@ $(document).ready(function() {
       $(".color-mode-inner").removeClass("active");
     }
   }
-  $("body").useItemsLocalStorage("body-dark", "body-light", "body");
+  $(".home").useItemsLocalStorage("home-dark", "home-light", "home");
   $("nav, .explore").useItemsLocalStorage("dark-blur", "light-blur", "blur")
-  $(".languages, .piano-dream").useItemsLocalStorage("dark-text", "light-text", "text");
+  $(".languages, .piano-dream, .about-text").useItemsLocalStorage("dark-text", "light-text", "text");
   $(".logo-btn").useItemsLocalStorage("logo-dark", "logo-light", "logo");
   $(".facebook-btn").useItemsLocalStorage("fb-dark", "fb-light", "fb");
   $(".instagram-btn").useItemsLocalStorage("ig-dark", "ig-light", "ig");
@@ -18,8 +19,9 @@ $(document).ready(function() {
   $(".nav-elements").useItemsLocalStorage("nav-el-dark", "nav-el-light", "nav-elements");
   $(".bar").useItemsLocalStorage("bar-dark", "bar-light", "bar");
   if (localStorage.getItem("meta-logo") !== null) {
-    $(".meta-logo").attr("href", localStorage.getItem("meta-logo"))
+    $(".meta-logo").attr("href", localStorage.getItem("meta-logo"));
   }
+  $(".about").useItemsLocalStorage("about-dark", "about-light", "about");
 
   $(".color-mode-btn").click(function() {
     $(".color-mode-inner").toggleClass("active");
@@ -28,9 +30,9 @@ $(document).ready(function() {
     } else {
       localStorage.setItem("inner-active", "not-active");
     }
-    $("body").toggleDarkLight("body-dark", "body-light", "body");
+    $(".home").toggleDarkLight("home-dark", "home-light", "home");
     $("nav, .explore").toggleDarkLight("dark-blur", "light-blur", "blur")
-    $(".languages, .piano-dream").toggleDarkLight("dark-text", "light-text", "text");
+    $(".languages, .piano-dream, .about-text").toggleDarkLight("dark-text", "light-text", "text");
     $(".logo-btn").toggleDarkLight("logo-dark", "logo-light", "logo");
     $(".facebook-btn").toggleDarkLight("fb-dark", "fb-light", "fb");
     $(".instagram-btn").toggleDarkLight("ig-dark", "ig-light", "ig");
@@ -40,6 +42,7 @@ $(document).ready(function() {
     $(".nav-elements").toggleDarkLight("nav-el-dark", "nav-el-light", "nav-elements");
     $(".bar").toggleDarkLight("bar-dark", "bar-light", "bar");
     $(".meta-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png", "meta-logo");
+    $(".about").toggleDarkLight("about-dark", "about-light", "about");
   });
 
   $(".hamburger").click(function () {

@@ -3,15 +3,12 @@ $clampIcon: clamp(40px, 10vw, 60px);
 $clampIconHover: clamp(44px, 11vw, 66px);
 $clampGrow: clamp(1.2px, 0.25vw, 1.8px);
 
-
 @mixin blurBlack {
   background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
 }
 
 @mixin blurWhite {
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
 }
 
 @mixin displayFlex {
@@ -37,91 +34,85 @@ $clampGrow: clamp(1.2px, 0.25vw, 1.8px);
   font-family: "Nunito";
 }
 
-body {
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+nav {
+  z-index: 1;
+  backdrop-filter: blur(10px);
+
+  .nav-pc {
+    @include displayFlex();
+  }
+
+  position: fixed;
+  min-width: 100vw;
+  top: 0;
   transition: 0.6s;
-}
+  overflow: hidden;
 
-header {
-  nav {
-    .nav-pc {
-      @include displayFlex();
-    }
-
-    position: fixed;
-    min-width: 100vw;
-    top: 0;
+  .logo-btn {
+    height: calc(50 * $clampGrow);
+    width: calc(60 * $clampGrow);
+    margin: calc(10 * $clampGrow);
+    background-repeat: no-repeat;
+    background-size: contain;
     transition: 0.6s;
-    overflow: hidden;
 
-    .logo-btn {
-      height: calc(50 * $clampGrow);
-      width: calc(60 * $clampGrow);
-      margin: calc(10 * $clampGrow);
-      background-repeat: no-repeat;
-      background-size: contain;
-      transition: 0.6s;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    .options {
+  .options {
+    @include displayFlex();
+    gap: calc(10 * $clampGrow);
+    margin-right: calc(10 * $clampGrow);
+
+    .languages {
       @include displayFlex();
-      gap: calc(10 * $clampGrow);
-      margin-right: calc(10 * $clampGrow);
+      gap: calc(6 * $clampGrow);
+      font-weight: 600;
 
-      .languages {
+      .lang {
         @include displayFlex();
-        gap: calc(6 * $clampGrow);
-        font-weight: 600;
-        
-        .lang {
-          @include displayFlex();
-          text-decoration: none;
-          font-size: calc(14 * $clampGrow);
-          color: inherit;
-          transition: 0.6s;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-
-        .hide {
-          display: none;
-        }
-      }
-
-      .color-mode-btn {
-        display: flex;
-        align-items: center;
-        width: calc(30 * $clampGrow);
-        height: calc(16 * $clampGrow);
-        padding: calc(2 * $clampGrow);
-        border-radius: 50% / 100%;
-        cursor: pointer;
-        overflow: hidden;
+        text-decoration: none;
+        font-size: calc(14 * $clampGrow);
+        color: inherit;
         transition: 0.6s;
 
-        .color-mode-inner {
-          width: calc(12 * $clampGrow);
-          height: calc(12 * $clampGrow);
-          background-repeat: no-repeat;
-          background-size: contain;
-          border-radius: 50%;
-          transition: 0.6s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
 
-          &.active {
-            transform: translateX(calc(14 * $clampGrow));
+      .hide {
+        display: none;
+      }
+    }
 
-            &::before {
-              left: calc(-5 * $clampGrow);
-              transform: scale(1);
-            }
+    .color-mode-btn {
+      display: flex;
+      align-items: center;
+      width: calc(30 * $clampGrow);
+      height: calc(16 * $clampGrow);
+      padding: calc(2 * $clampGrow);
+      border-radius: 50% / 100%;
+      cursor: pointer;
+      overflow: hidden;
+      transition: 0.6s;
+
+      .color-mode-inner {
+        width: calc(12 * $clampGrow);
+        height: calc(12 * $clampGrow);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        transition: 0.6s;
+
+        &.active {
+          transform: translateX(calc(14 * $clampGrow));
+
+          &::before {
+            left: calc(-5 * $clampGrow);
+            transform: scale(1);
           }
         }
       }
@@ -129,14 +120,19 @@ header {
   }
 }
 
-main {
+.home {
   min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.6s;
   display: flex;
+  align-items: center;
 
   .explore {
     margin: auto;
     padding: clamp(10px, 2.5vw, 22px) $clampPadding $clampPadding $clampPadding;
     border-radius: clamp(10px, 2vw, 20px);
+    backdrop-filter: blur(3px);
     transition: 0.6s;
 
     .piano-dream {
@@ -155,7 +151,7 @@ main {
         height: $clampIcon;
         width: $clampIcon;
         transition: 0.6s;
-        
+
         &:hover {
           transform: scale(1.1);
         }
@@ -168,7 +164,7 @@ main {
       text-align: center;
       text-decoration: none;
       width: fit-content;
-      font-weight: bold;
+      font-weight: 600;
       font-size: clamp(14px, 3vw, 20px);
       padding: clamp(8px, 1.5vw, 18px);
       border-radius: clamp(10px, 2vw, 20px);
@@ -178,11 +174,42 @@ main {
   }
 }
 
+.about {
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+
+  .about-text {
+    width: 80vw;
+    margin: auto;
+    padding: clamp(40px, 10vw, 60px) 0;
+    transition: 0.6s;
+
+    h2 {
+      font-weight: 700;
+      text-align: center;
+      font-size: clamp(20px, 5vw, 30px);
+      padding-bottom: clamp(8px, 2vw, 12px);
+    }
+
+    p {
+      span {
+        font-weight: bold;
+      }
+      font-size: clamp(14px, 3vw, 20px);
+    }
+  }
+}
+
 // Light Theme
 
-.body-light {
+.home-light {
   background-image: url(../img/background/white-piano.jpeg);
   background-position: 75%;
+}
+
+.about-light {
+  background-color: #b8bcc2;
 }
 
 .light-text {
@@ -194,7 +221,7 @@ main {
 }
 
 .fb-light {
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0AviewBox='0,0,256,256'%0Astyle='fill:%23000000;'%3E%3Cg fill='%23000000' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3E%3Cg transform='scale(5.12,5.12)'%3E%3Cpath d='M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0AviewBox='0,0,256,256'%0Astyle='fill:%23000000;'%3E%3Cg fill='%23000000' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3E%3Cg transform='scale(5.12,5.12)'%3E%3Cpath d='M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .ig-light {
@@ -239,15 +266,18 @@ main {
 
 // Dark Theme
 
-.body-dark {
+.home-dark {
   background-image: url(../img/background/black-piano.jpeg);
   background-position: 30%;
+}
+
+.about-dark {
+  background-color:#111111;
 }
 
 .dark-text {
   color: white;
 }
-
 
 .logo-dark {
   background-image: url(../img/logo/pianodream-no-bg-logo-white.png);
@@ -302,14 +332,14 @@ main {
 .nav-elements {
   justify-content: space-evenly;
   width: 60%;
-  
+
   a {
     text-decoration: none;
     font-size: calc(14 * $clampGrow);
     font-weight: 600;
     color: inherit;
     transition: 0.6s;
-    
+
     &:hover {
       transform: scale(1.1);
     }
