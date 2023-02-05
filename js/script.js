@@ -1,48 +1,59 @@
-// localStorage.clear();
+// localStorage.clear(),
 $(document).ready(function() {
-  if (localStorage.getItem("inner-active") !== null) {
-    if (localStorage.getItem("inner-active") === "active") {
-      $(".color-mode-inner").addClass("active");
-    } else {
-      $(".color-mode-inner").removeClass("active");
-    }
+  if (localStorage.getItem("switcher") === null) {
+    $(".home").addClass("home-light");
+    $("nav, .explore").addClass("light-blur")
+    $(".languages, .piano-dream, .about-text").addClass("light-text");
+    $(".logo-btn").addClass("logo-light");
+    $(".facebook-btn").addClass("fb-light");
+    $(".instagram-btn").addClass("ig-light");
+    $(".more-btn").addClass("more-light");
+    $(".color-mode-btn").addClass("color-light");
+    $(".color-mode-inner").addClass("inner-light");
+    $(".nav-elements").addClass("nav-el-light");
+    $(".bar").addClass("bar-light");
+    $(".meta-logo").attr("href", "img/logo/pianodream-logo-black.png");
+    $(".about").addClass("about-light");
+    $(".form").addClass("form-light");
+  } else {
+    $(".color-mode-inner").addClass("active");
+    $(".home").addClass("home-dark");
+    $("nav, .explore").addClass("dark-blur")
+    $(".languages, .piano-dream, .about-text").addClass("dark-text");
+    $(".logo-btn").addClass("logo-dark");
+    $(".facebook-btn").addClass("fb-dark");
+    $(".instagram-btn").addClass("ig-dark");
+    $(".more-btn").addClass("more-dark");
+    $(".color-mode-btn").addClass("color-dark");
+    $(".color-mode-inner").addClass("inner-dark");
+    $(".nav-elements").addClass("nav-el-dark");
+    $(".bar").addClass("bar-dark");
+    $(".meta-logo").attr("href", "img/logo/pianodream-logo-white.png");
+    $(".about").addClass("about-dark");
+    $(".form").addClass("form-dark");
   }
-  $(".home").useItemsLocalStorage("home-dark", "home-light", "home");
-  $("nav, .explore").useItemsLocalStorage("dark-blur", "light-blur", "blur")
-  $(".languages, .piano-dream, .about-text").useItemsLocalStorage("dark-text", "light-text", "text");
-  $(".logo-btn").useItemsLocalStorage("logo-dark", "logo-light", "logo");
-  $(".facebook-btn").useItemsLocalStorage("fb-dark", "fb-light", "fb");
-  $(".instagram-btn").useItemsLocalStorage("ig-dark", "ig-light", "ig");
-  $(".more-btn").useItemsLocalStorage("more-dark", "more-light", "more");
-  $(".color-mode-btn").useItemsLocalStorage("color-dark", "color-light", "color");
-  $(".color-mode-inner").useItemsLocalStorage("inner-dark", "inner-light", "inner");
-  $(".nav-elements").useItemsLocalStorage("nav-el-dark", "nav-el-light", "nav-elements");
-  $(".bar").useItemsLocalStorage("bar-dark", "bar-light", "bar");
-  if (localStorage.getItem("meta-logo") !== null) {
-    $(".meta-logo").attr("href", localStorage.getItem("meta-logo"));
-  }
-  $(".about").useItemsLocalStorage("about-dark", "about-light", "about");
 
   $(".color-mode-btn").click(function() {
     $(".color-mode-inner").toggleClass("active");
     if ($(".color-mode-inner").hasClass("active")) {
-      localStorage.setItem("inner-active", "active");
+      localStorage.setItem("switcher", "active");
     } else {
-      localStorage.setItem("inner-active", "not-active");
+      localStorage.removeItem("switcher");
     }
-    $(".home").toggleDarkLight("home-dark", "home-light", "home");
-    $("nav, .explore").toggleDarkLight("dark-blur", "light-blur", "blur")
-    $(".languages, .piano-dream, .about-text").toggleDarkLight("dark-text", "light-text", "text");
-    $(".logo-btn").toggleDarkLight("logo-dark", "logo-light", "logo");
-    $(".facebook-btn").toggleDarkLight("fb-dark", "fb-light", "fb");
-    $(".instagram-btn").toggleDarkLight("ig-dark", "ig-light", "ig");
-    $(".more-btn").toggleDarkLight("more-dark", "more-light", "more");
-    $(".color-mode-btn").toggleDarkLight("color-dark", "color-light", "color");
-    $(".color-mode-inner").toggleDarkLight("inner-dark", "inner-light", "inner");
-    $(".nav-elements").toggleDarkLight("nav-el-dark", "nav-el-light", "nav-elements");
-    $(".bar").toggleDarkLight("bar-dark", "bar-light", "bar");
-    $(".meta-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png", "meta-logo");
-    $(".about").toggleDarkLight("about-dark", "about-light", "about");
+    $(".home").toggleBtwn2Classes("home-dark", "home-light");
+    $("nav, .explore").toggleBtwn2Classes("dark-blur", "light-blur")
+    $(".languages, .piano-dream, .about-text").toggleBtwn2Classes("dark-text", "light-text");
+    $(".logo-btn").toggleBtwn2Classes("logo-dark", "logo-light");
+    $(".facebook-btn").toggleBtwn2Classes("fb-dark", "fb-light");
+    $(".instagram-btn").toggleBtwn2Classes("ig-dark", "ig-light");
+    $(".more-btn").toggleBtwn2Classes("more-dark", "more-light");
+    $(".color-mode-btn").toggleBtwn2Classes("color-dark", "color-light");
+    $(".color-mode-inner").toggleBtwn2Classes("inner-dark", "inner-light");
+    $(".nav-elements").toggleBtwn2Classes("nav-el-dark", "nav-el-light");
+    $(".bar").toggleBtwn2Classes("bar-dark", "bar-light");
+    $(".meta-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png");
+    $(".about").toggleBtwn2Classes("about-dark", "about-light");
+    $(".form").toggleBtwn2Classes("form-dark", "form-light");
   });
 
   $(".hamburger").click(function () {
@@ -56,34 +67,16 @@ $(document).ready(function() {
   })
 });
 
-$.fn.toggleDarkLight = function (class1, class2, keyname) {
-    if ($(this).hasClass(class1)) {
-      localStorage.setItem(keyname, class2);
-    } else {
-      localStorage.setItem(keyname, class1);
-    }
+$.fn.toggleBtwn2Classes = function (class1, class2) {
     return $(this).toggleClass(class1).toggleClass(class2);
   }
 
-$.fn.useItemsLocalStorage = function (class1, class2, keyname) {
-  if (localStorage.getItem(keyname) !== null) {
-    if ($(this).hasClass(class1)) {
-      $(this).removeClass(class1);
-    } else {
-      $(this).removeClass(class2);
-    }
-    return $(this).addClass(localStorage.getItem(keyname));
-  }
-}
-
-$.fn.toggleAttrVal = function (attr, val1, val2, keyname) {
+$.fn.toggleAttrVal = function (attr, val1, val2) {
   const test = $(this).attr(attr);
   if (test === val1) {
-    localStorage.setItem(keyname, val2);
     return $(this).attr(attr, val2);
   }
   if (test === val2) {
-    localStorage.setItem(keyname, val1);
     return $(this).attr(attr, val1);
   }
 };
