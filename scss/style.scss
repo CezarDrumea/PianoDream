@@ -179,6 +179,9 @@ nav {
   display: flex;
   align-items: center;
   transition: $transitionTime;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
   
   .about-text {
     width: 80vw;
@@ -220,8 +223,6 @@ nav {
 
 .about-light {
   background-image: url(../img/background/gradient-light.png);
-  background-size: cover;
-  background-position: center;
 }
 
 .form-light {
@@ -289,8 +290,6 @@ nav {
 
 .about-dark {
   background-image: url(../img/background/gradient-dark.png);
-  background-size: cover;
-  background-position: center;
 }
 
 .form-dark {
