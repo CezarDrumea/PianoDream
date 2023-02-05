@@ -56,7 +56,7 @@ $(document).ready(function() {
     $(".form").toggleBtwn2Classes("form-dark", "form-light");
   });
 
-  $(".hamburger").click(function () {
+  $(".hamburger, .mobile").click(function () {
     $(".mobile").toggle(600);
   })
 

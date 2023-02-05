@@ -248,8 +248,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .about-light {
   background-image: url(../img/background/gradient-light.png);
-  background-repeat: repeat-x;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -316,8 +315,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .about-dark {
   background-image: url(../img/background/gradient-dark.png);
-  background-repeat: repeat-x;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
