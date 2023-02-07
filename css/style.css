@@ -155,7 +155,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.home .explore .piano-dream {
+.home .explore .magic-piano {
   font-family: "Lobster";
   font-size: clamp(40px, 10vw, 60px);
   text-align: center;
@@ -208,6 +208,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   transition: 0.6s;
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
 }
 .about .about-text {
   width: 80vw;
@@ -242,6 +243,19 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
       -ms-flex-align: center;
           align-items: center;
 }
+.form .form-text {
+  margin: auto;
+  padding: clamp(20px, 3.5vw, 32px);
+  border-radius: clamp(10px, 2vw, 20px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.form .form-text .form-input, .form .form-text .form-textarea, .form .form-text .form-submit {
+  display: block;
+  margin: auto;
+}
 
 .home-light {
   background-image: url(../img/background/white-piano.jpeg);
@@ -261,7 +275,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 }
 
 .logo-light {
-  background-image: url(../img/logo/pianodream-no-bg-logo-black.png);
+  background-image: url(../img/logo/magic-piano-nav-light.png);
 }
 
 .fb-light {
@@ -326,7 +340,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 }
 
 .logo-dark {
-  background-image: url(../img/logo/pianodream-no-bg-logo-white.png);
+  background-image: url(../img/logo/magic-piano-nav-dark.png);
 }
 
 .fb-dark {

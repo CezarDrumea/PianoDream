@@ -1,9 +1,9 @@
-// localStorage.clear(),
+localStorage.clear(),
 $(document).ready(function() {
   if (localStorage.getItem("switcher") === null) {
     $(".home").addClass("home-light");
-    $("nav, .explore").addClass("light-blur")
-    $(".languages, .piano-dream, .about-text").addClass("light-text");
+    $("nav, .explore, .form-text").addClass("light-blur")
+    $(".languages, .magic-piano, .about-text").addClass("light-text");
     $(".logo-btn").addClass("logo-light");
     $(".facebook-btn").addClass("fb-light");
     $(".instagram-btn").addClass("ig-light");
@@ -12,14 +12,14 @@ $(document).ready(function() {
     $(".color-mode-inner").addClass("inner-light");
     $(".nav-elements").addClass("nav-el-light");
     $(".bar").addClass("bar-light");
-    $(".meta-logo").attr("href", "img/logo/pianodream-logo-black.png");
+    $(".meta-logo").attr("href", "img/logo/magic-piano-meta-light.png");
     $(".about").addClass("about-light");
     $(".form").addClass("form-light");
   } else {
     $(".color-mode-inner").addClass("active");
     $(".home").addClass("home-dark");
-    $("nav, .explore").addClass("dark-blur")
-    $(".languages, .piano-dream, .about-text").addClass("dark-text");
+    $("nav, .explore, .form-text").addClass("dark-blur")
+    $(".languages, .magic-piano, .about-text").addClass("dark-text");
     $(".logo-btn").addClass("logo-dark");
     $(".facebook-btn").addClass("fb-dark");
     $(".instagram-btn").addClass("ig-dark");
@@ -28,7 +28,7 @@ $(document).ready(function() {
     $(".color-mode-inner").addClass("inner-dark");
     $(".nav-elements").addClass("nav-el-dark");
     $(".bar").addClass("bar-dark");
-    $(".meta-logo").attr("href", "img/logo/pianodream-logo-white.png");
+    $(".meta-logo").attr("href", "img/logo/magic-piano-meta-dark.png");
     $(".about").addClass("about-dark");
     $(".form").addClass("form-dark");
   }
@@ -41,8 +41,8 @@ $(document).ready(function() {
       localStorage.removeItem("switcher");
     }
     $(".home").toggleBtwn2Classes("home-dark", "home-light");
-    $("nav, .explore").toggleBtwn2Classes("dark-blur", "light-blur")
-    $(".languages, .piano-dream, .about-text").toggleBtwn2Classes("dark-text", "light-text");
+    $("nav, .explore, .form-text").toggleBtwn2Classes("dark-blur", "light-blur")
+    $(".languages, .magic-piano, .about-text").toggleBtwn2Classes("dark-text", "light-text");
     $(".logo-btn").toggleBtwn2Classes("logo-dark", "logo-light");
     $(".facebook-btn").toggleBtwn2Classes("fb-dark", "fb-light");
     $(".instagram-btn").toggleBtwn2Classes("ig-dark", "ig-light");
@@ -51,7 +51,7 @@ $(document).ready(function() {
     $(".color-mode-inner").toggleBtwn2Classes("inner-dark", "inner-light");
     $(".nav-elements").toggleBtwn2Classes("nav-el-dark", "nav-el-light");
     $(".bar").toggleBtwn2Classes("bar-dark", "bar-light");
-    $(".meta-logo").toggleAttrVal("href", "img/logo/pianodream-logo-white.png", "img/logo/pianodream-logo-black.png");
+    $(".meta-logo").toggleAttrVal("href", "img/logo/magic-piano-meta-dark.png", "img/logo/magic-piano-meta-light.png");
     $(".about").toggleBtwn2Classes("about-dark", "about-light");
     $(".form").toggleBtwn2Classes("form-dark", "form-light");
   });

@@ -136,7 +136,7 @@ nav {
     backdrop-filter: blur(3px);
     transition: $transitionTime;
 
-    .piano-dream {
+    .magic-piano {
       font-family: "Lobster";
       font-size: clamp(40px, 10vw, 60px);
       text-align: center;
@@ -212,6 +212,19 @@ nav {
   transition: $transitionTime;
   display: flex;
   align-items: center;
+
+  .form-text {
+    margin: auto;
+    padding: $clampPadding;
+    border-radius: clamp(10px, 2vw, 20px);
+    backdrop-filter: blur(3px);
+    transition: $transitionTime;
+
+    .form-input, .form-textarea, .form-submit {
+      display: block;
+      margin: auto;
+    }
+  }
 }
 
 // Light Theme
@@ -234,7 +247,7 @@ nav {
 }
 
 .logo-light {
-  background-image: url(../img/logo/pianodream-no-bg-logo-black.png);
+  background-image: url(../img/logo/magic-piano-nav-light.png);
 }
 
 .fb-light {
@@ -301,7 +314,7 @@ nav {
 }
 
 .logo-dark {
-  background-image: url(../img/logo/pianodream-no-bg-logo-white.png);
+  background-image: url(../img/logo/magic-piano-nav-dark.png);
 }
 
 .fb-dark {
