@@ -1,4 +1,3 @@
-localStorage.clear(),
 $(document).ready(function() {
   if (localStorage.getItem("switcher") === null) {
     $(".home").addClass("home-light");

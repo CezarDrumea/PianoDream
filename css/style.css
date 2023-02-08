@@ -188,8 +188,8 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 600;
-  font-size: clamp(14px, 3vw, 20px);
+  font-weight: 500;
+  font-size: clamp(15px, 3vw, 20px);
   padding: clamp(8px, 1.5vw, 18px);
   border-radius: clamp(10px, 2vw, 20px);
   margin-top: clamp(14px, 3vw, 30px);
@@ -220,11 +220,11 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 .about .about-text h2 {
   font-weight: 700;
   text-align: center;
-  font-size: clamp(20px, 5vw, 30px);
+  font-size: clamp(24px, 6vw, 34px);
   padding-bottom: clamp(8px, 2vw, 12px);
 }
 .about .about-text p {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(15px, 3vw, 20px);
 }
 .about .about-text p span {
   font-weight: bold;
@@ -243,6 +243,10 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
       -ms-flex-align: center;
           align-items: center;
 }
+.form .form-title {
+  font-size: clamp(20px, 5vw, 30px);
+  text-align: center;
+}
 .form .form-text {
   margin: auto;
   padding: clamp(20px, 3.5vw, 32px);
@@ -252,9 +256,33 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.form .form-text .form-input, .form .form-text .form-textarea, .form .form-text .form-submit {
+.form .form-text .form-input, .form .form-text .form-textarea {
   display: block;
   margin: auto;
+  width: 100%;
+  font-size: clamp(14px, 3vw, 16px);
+  padding: clamp(2px, 1vw, 4px);
+}
+.form .form-text .form-input::-webkit-input-placeholder, .form .form-text .form-textarea::-webkit-input-placeholder {
+  font-size: clamp(15px, 3vw, 20px);
+}
+.form .form-text .form-input::-moz-placeholder, .form .form-text .form-textarea::-moz-placeholder {
+  font-size: clamp(15px, 3vw, 20px);
+}
+.form .form-text .form-input:-ms-input-placeholder, .form .form-text .form-textarea:-ms-input-placeholder {
+  font-size: clamp(15px, 3vw, 20px);
+}
+.form .form-text .form-input::-ms-input-placeholder, .form .form-text .form-textarea::-ms-input-placeholder {
+  font-size: clamp(15px, 3vw, 20px);
+}
+.form .form-text .form-input::placeholder, .form .form-text .form-textarea::placeholder {
+  font-size: clamp(15px, 3vw, 20px);
+}
+.form .form-text .form-submit {
+  display: block;
+  margin: auto;
+  padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+  font-size: clamp(16px, 4vw, 20px);
 }
 
 .home-light {

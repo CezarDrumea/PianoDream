@@ -165,8 +165,8 @@ nav {
       text-align: center;
       text-decoration: none;
       width: fit-content;
-      font-weight: 600;
-      font-size: clamp(14px, 3vw, 20px);
+      font-weight: 500;
+      font-size: clamp(15px, 3vw, 20px);
       padding: clamp(8px, 1.5vw, 18px);
       border-radius: clamp(10px, 2vw, 20px);
       margin-top: clamp(14px, 3vw, 30px);
@@ -192,7 +192,7 @@ nav {
     h2 {
       font-weight: 700;
       text-align: center;
-      font-size: clamp(20px, 5vw, 30px);
+      font-size: clamp(24px, 6vw, 34px);
       padding-bottom: clamp(8px, 2vw, 12px);
     }
 
@@ -200,7 +200,7 @@ nav {
       span {
         font-weight: bold;
       }
-      font-size: clamp(14px, 3vw, 20px);
+      font-size: clamp(15px, 3vw, 20px);
     }
   }
 }
@@ -213,6 +213,11 @@ nav {
   display: flex;
   align-items: center;
 
+  .form-title {
+    font-size: clamp(20px, 5vw, 30px);
+    text-align: center;
+  }
+
   .form-text {
     margin: auto;
     padding: $clampPadding;
@@ -220,9 +225,23 @@ nav {
     backdrop-filter: blur(3px);
     transition: $transitionTime;
 
-    .form-input, .form-textarea, .form-submit {
+    .form-input, .form-textarea {
       display: block;
       margin: auto;
+      width: 100%;
+      font-size: clamp(14px, 3vw, 16px);
+      padding: clamp(2px, 1vw, 4px);
+
+      &::placeholder{
+        font-size: clamp(15px, 3vw, 20px);
+      }
+    }
+
+    .form-submit {
+      display: block;
+      margin: auto;
+      padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+      font-size: clamp(16px, 4vw, 20px);
     }
   }
 }
