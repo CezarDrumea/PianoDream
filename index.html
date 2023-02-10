@@ -33,7 +33,7 @@
         <div class="nav-elements pc">
           <a href="#acasa">Acasă</a>
           <a href="#despre">Despre</a>
-          <a href="">Formular</a>
+          <a href="">Prețuri</a>
           <a href="">Profesori</a>
           <a href="">Contacte</a>
         </div>
@@ -54,7 +54,7 @@
         <div class="mobile-nav-flex">
           <a href="#acasa">Acasă</a>
           <a href="#despre">Despre</a>
-          <a href="">Formular</a>
+          <a href="">Prețuri</a>
           <a href="">Profesori</a>
           <a href="">Contacte</a>
         </div>
@@ -85,19 +85,26 @@
         <p><span>Magic Piano</span> știe să-și aleagă profesorii!. În viziunea noastră, un bun profesor de pian este un profesor devotat muzicii, care poate transimite pasiunea pentru muzică elevilor săi. De asemenea, acesta este un muzician talentat, care poate demonstra tehnicile și stilurile pianistice prin propria sa interpretare. În plus, un bun profesor de pian ar trebui să fie un motivator și un sprijin pentru elevii săi, ajutându-i să atingă obiectivele lor muzicale.</p>
       </div>
     </div>
-    <!-- Formular -->
+    <!-- Preturi-->
     <div class="form">
-      <div class="form-text">
-        <h2 class="form-title">Formular de aplicare</h2>
-        <input class="form-input" type="text" placeholder="Nume">
-        <input class="form-input" type="number" placeholder="Vârsta">
-        <input class="form-input" type="number" placeholder="Număr de telefon">
-        <input class="form-input" type="email" placeholder="Email">
-        <input class="form-input" type="radio">
-        <input class="form-input" type="radio">
-        <textarea class="form-textarea" name="" id="" cols="30" rows="10" placeholder="Mesaj"></textarea>
+      <form class="form-text" action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="apikey" value="2cc2e188-94d2-499b-8fe7-59d26a2b7a17">
+        <h2 class="form-title">Prețuri</h2>
+        <p class="price-description">Magic Piano oferă lecții individuale cu prețul de <span>250 lei</span> pentru o oră astronomică sau <span>1800 lei</span> pentru un abonament de <span>8 lecții (225 lei/oră)</span>.</p>
+        <input class="form-input" type="text" placeholder="Nume" required>
+        <input class="form-input" type="number" placeholder="Vârsta" required min="4" max="100">
+        <input class="form-input" type="tel" placeholder="Număr de telefon" required>
+        <input class="form-input" type="email" placeholder="Email" required>
+        <div class="radio-selection">
+          <input class="radio-input" id="individual" type="radio" name="selection">
+          <label class="radio-label" for="individual">O lecție</label>
+          <input class="radio-input" id="subscription" type="radio" name="selection">
+          <label class="radio-label" for="subscription">Abonament</label>
+        </div>
+        <textarea class="form-textarea" name="" id="" rows="3" placeholder="Mesaj"></textarea>
         <button class="form-submit" type="submit">Trimite</button>
-      </div>
+        <div class="form-result"></div>
+      </form>
     </div>
     <!-- Profesori -->
     <div class="teachers">

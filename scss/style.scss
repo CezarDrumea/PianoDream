@@ -209,9 +209,26 @@ nav {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: $transitionTime;
+  transition: background-image $transitionTime;
   display: flex;
   align-items: center;
+
+  h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(24px, 6vw, 34px);
+    padding-bottom: clamp(8px, 2vw, 12px);
+    transition: $transitionTime;
+  }
+
+  p {
+    span {
+      font-weight: bold;
+    }
+    font-size: clamp(15px, 3vw, 20px);
+    margin: auto auto 1em;
+    transition: $transitionTime;
+  }
 
   .form-title {
     font-size: clamp(20px, 5vw, 30px);
@@ -223,14 +240,59 @@ nav {
     padding: $clampPadding;
     border-radius: clamp(10px, 2vw, 20px);
     backdrop-filter: blur(3px);
-    transition: $transitionTime;
+    width: 35em;
+
+    .radio-selection {
+      display: flex;
+      justify-content: space-between;
+
+      .radio-label {
+        display: block;
+        width: 49%;
+        padding: 10px;
+        border-radius: 0.8em;
+        font-size: clamp(14px, 3vw, 16px);
+        transition: $transitionTime;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+  
+      .radio-input {
+        display: none;
+        
+        &:checked + .radio-label { 
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+
+    input[type=number] {
+      appearance: textfield;
+    }
+
+    input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    textarea {
+      resize: none;
+    }
 
     .form-input, .form-textarea {
       display: block;
-      margin: auto;
-      width: 100%;
+      margin: auto auto 1em;
       font-size: clamp(14px, 3vw, 16px);
-      padding: clamp(2px, 1vw, 4px);
+      padding: 0.5em;
+      border-radius: 0.5em;
+      border: none;
+      width: 100%;
+      transition: $transitionTime;
+
+      &:focus {
+        outline: none;
+      }
 
       &::placeholder{
         font-size: clamp(15px, 3vw, 20px);
@@ -239,9 +301,15 @@ nav {
 
     .form-submit {
       display: block;
-      margin: auto;
-      padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+      margin: clamp(14px, 3vw, 30px) auto auto auto;
       font-size: clamp(16px, 4vw, 20px);
+      text-align: center;
+      font-weight: 500;
+      font-size: clamp(15px, 3vw, 20px);
+      padding: 0.5em 1em;
+      border-radius: 0.8em;
+      transition: $transitionTime;
+      background-color: unset;
     }
   }
 }
@@ -282,7 +350,7 @@ nav {
   border: solid 2px black;
 
   &:hover {
-    background-color: black;
+    background-color: black !important;
     color: rgba(255, 255, 255, 0.8);
   }
 
@@ -311,6 +379,28 @@ nav {
 
 .bar-light {
   background-color: black;
+}
+
+.input-light {
+  background-color: white;
+  &:focus {
+    box-shadow: 0 0 0 0.1em black;
+  }
+} 
+
+.radio-light {
+  &:checked + .radio-label-light { 
+    background-color: black !important;
+    color: white !important;
+  }
+}
+
+.radio-label-light {
+  border: 2px solid black;
+  &:hover {
+    color: rgb(50, 50, 50);
+    border-color: gray;
+  }
 }
 
 // Dark Theme
@@ -349,7 +439,7 @@ nav {
   border: solid 2px white;
 
   &:hover {
-    background-color: white;
+    background-color: white !important;
     color: rgba(0, 0, 0, 0.8);
   }
 
@@ -380,6 +470,27 @@ nav {
   background-color: white;
 }
 
+.input-dark {
+  background-color: black;
+  &:focus {
+    box-shadow: 0 0 0 0.1em white;
+  }
+}
+
+.radio-dark {
+  &:checked + .radio-label-dark { 
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+.radio-label-dark {
+  border: 2px solid white;
+  &:hover {
+    color: rgb(205, 205, 205);
+    border-color: rgb(205, 205, 205);
+  }
+}
 // Media Querry elements
 
 .nav-elements {
@@ -442,7 +553,11 @@ nav {
 
   .nav-elements {
     a {
-      font-size: calc(12 * $clampGrow);
+      font-size: calc(14 * $clampGrow);
     }
+  }
+
+  .form-text {
+    width: min(80vw, 35em) !important;
   }
 }

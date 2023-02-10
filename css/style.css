@@ -234,14 +234,31 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: background-image 0.6s;
+  transition: background-image 0.6s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.form h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(24px, 6vw, 34px);
+  padding-bottom: clamp(8px, 2vw, 12px);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.form p {
+  font-size: clamp(15px, 3vw, 20px);
+  margin: auto auto 1em;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.form p span {
+  font-weight: bold;
 }
 .form .form-title {
   font-size: clamp(20px, 5vw, 30px);
@@ -253,15 +270,60 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   border-radius: clamp(10px, 2vw, 20px);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  width: 35em;
+}
+.form .form-text .radio-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form .form-text .radio-selection .radio-label {
+  display: block;
+  width: 49%;
+  padding: 10px;
+  border-radius: 0.8em;
+  font-size: clamp(14px, 3vw, 16px);
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.form .form-text .radio-selection .radio-input {
+  display: none;
+}
+.form .form-text .radio-selection .radio-input:checked + .radio-label {
+  background-color: black;
+  color: white;
+}
+.form .form-text input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.form .form-text input::-webkit-inner-spin-button, .form .form-text input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.form .form-text textarea {
+  resize: none;
 }
 .form .form-text .form-input, .form .form-text .form-textarea {
   display: block;
-  margin: auto;
-  width: 100%;
+  margin: auto auto 1em;
   font-size: clamp(14px, 3vw, 16px);
-  padding: clamp(2px, 1vw, 4px);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  width: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.form .form-text .form-input:focus, .form .form-text .form-textarea:focus {
+  outline: none;
 }
 .form .form-text .form-input::-webkit-input-placeholder, .form .form-text .form-textarea::-webkit-input-placeholder {
   font-size: clamp(15px, 3vw, 20px);
@@ -280,9 +342,16 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 }
 .form .form-text .form-submit {
   display: block;
-  margin: auto;
-  padding: clamp(2px, 1vw, 4px) clamp(4px, 2vw, 8px);
+  margin: clamp(14px, 3vw, 30px) auto auto auto;
   font-size: clamp(16px, 4vw, 20px);
+  text-align: center;
+  font-weight: 500;
+  font-size: clamp(15px, 3vw, 20px);
+  padding: 0.5em 1em;
+  border-radius: 0.8em;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  background-color: unset;
 }
 
 .home-light {
@@ -319,7 +388,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   border: solid 2px black;
 }
 .more-light:hover {
-  background-color: black;
+  background-color: black !important;
   color: rgba(255, 255, 255, 0.8);
 }
 .more-light:active {
@@ -348,6 +417,27 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .bar-light {
   background-color: black;
+}
+
+.input-light {
+  background-color: white;
+}
+.input-light:focus {
+  -webkit-box-shadow: 0 0 0 0.1em black;
+          box-shadow: 0 0 0 0.1em black;
+}
+
+.radio-light:checked + .radio-label-light {
+  background-color: black !important;
+  color: white !important;
+}
+
+.radio-label-light {
+  border: 2px solid black;
+}
+.radio-label-light:hover {
+  color: rgb(50, 50, 50);
+  border-color: gray;
 }
 
 .home-dark {
@@ -384,7 +474,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   border: solid 2px white;
 }
 .more-dark:hover {
-  background-color: white;
+  background-color: white !important;
   color: rgba(0, 0, 0, 0.8);
 }
 .more-dark:active {
@@ -413,6 +503,27 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .bar-dark {
   background-color: white;
+}
+
+.input-dark {
+  background-color: black;
+}
+.input-dark:focus {
+  -webkit-box-shadow: 0 0 0 0.1em white;
+          box-shadow: 0 0 0 0.1em white;
+}
+
+.radio-dark:checked + .radio-label-dark {
+  background-color: white !important;
+  color: black !important;
+}
+
+.radio-label-dark {
+  border: 2px solid white;
+}
+.radio-label-dark:hover {
+  color: rgb(205, 205, 205);
+  border-color: rgb(205, 205, 205);
 }
 
 .nav-elements {
@@ -479,6 +590,9 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
     display: none;
   }
   .nav-elements a {
-    font-size: calc(12 * clamp(1.2px, 0.25vw, 1.8px));
+    font-size: calc(14 * clamp(1.2px, 0.25vw, 1.8px));
+  }
+  .form-text {
+    width: min(80vw, 35em) !important;
   }
 }
