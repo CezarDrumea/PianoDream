@@ -31,8 +31,8 @@
         </div>
         <!-- nav-elements for PC -->
         <div class="nav-elements pc">
-          <a href="#acasa">Acasă</a>
-          <a href="#despre">Despre</a>
+          <a href="">Acasă</a>
+          <a href="">Despre</a>
           <a href="">Prețuri</a>
           <a href="">Profesori</a>
           <a href="">Contacte</a>
@@ -52,8 +52,8 @@
       <!-- nav-elements for mobile -->
       <div class="nav-elements mobile">
         <div class="mobile-nav-flex">
-          <a href="#acasa">Acasă</a>
-          <a href="#despre">Despre</a>
+          <a href="">Acasă</a>
+          <a href="">Despre</a>
           <a href="">Prețuri</a>
           <a href="">Profesori</a>
           <a href="">Contacte</a>
@@ -66,10 +66,10 @@
       <div class="explore">
         <h1 class="magic-piano">Magic Piano</h1>
         <div class="socials">
-          <a href="" class="facebook-btn network"></a>
-          <a href="" class="instagram-btn network"></a>
+          <a href="https://www.facebook.com/profile.php?id=100068403848973" target="_blank" class="facebook-btn network"></a>
+          <a href="https://www.instagram.com/_magic_piano_/" target="_blank" class="instagram-btn network"></a>
         </div>
-        <a href="#despre" class="more-btn">Află mai mult</a>
+        <a href="" class="more-btn">Află mai mult</a>
       </div>
     </div>
     <!-- Despre -->
@@ -87,21 +87,20 @@
     </div>
     <!-- Preturi-->
     <div class="form">
-      <form class="form-text" action="https://api.web3forms.com/submit" method="post">
-        <input type="hidden" name="apikey" value="2cc2e188-94d2-499b-8fe7-59d26a2b7a17">
+      <form class="form-text" action="https://formsubmit.co/magic.piano2022@gmail.com" method="post">
         <h2 class="form-title">Prețuri</h2>
         <p class="price-description">Magic Piano oferă lecții individuale cu prețul de <span>250 lei</span> pentru o oră astronomică sau <span>1800 lei</span> pentru un abonament de <span>8 lecții (225 lei/oră)</span>.</p>
-        <input class="form-input" type="text" placeholder="Nume" required>
-        <input class="form-input" type="number" placeholder="Vârsta" required min="4" max="100">
-        <input class="form-input" type="tel" placeholder="Număr de telefon" required>
-        <input class="form-input" type="email" placeholder="Email" required>
+        <input class="form-input" type="text" placeholder="Nume" name="Nume" required>
+        <input class="form-input" type="number" placeholder="Vârsta" name="Vârsta" required min="4" max="100">
+        <input class="form-input" type="tel" placeholder="Număr de telefon" name="Tel." required>
+        <input class="form-input" type="email" placeholder="Email" name="Email" required>
         <div class="radio-selection">
-          <input class="radio-input" id="individual" type="radio" name="selection">
+          <input class="radio-input" id="individual" type="radio" name="selection" value="lectie" checked>
           <label class="radio-label" for="individual">O lecție</label>
-          <input class="radio-input" id="subscription" type="radio" name="selection">
+          <input class="radio-input" id="subscription" type="radio" name="selection" value="abonament">
           <label class="radio-label" for="subscription">Abonament</label>
         </div>
-        <textarea class="form-textarea" name="" id="" rows="3" placeholder="Mesaj"></textarea>
+        <textarea class="form-textarea" name="" id="" rows="3" placeholder="Mesaj" name="Mesaj"></textarea>
         <button class="form-submit" type="submit">Trimite</button>
         <div class="form-result"></div>
       </form>
