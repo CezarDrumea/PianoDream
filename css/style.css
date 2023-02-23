@@ -14,6 +14,10 @@
   font-family: "Nunito";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   z-index: 1;
   -webkit-backdrop-filter: blur(10px);
@@ -39,7 +43,7 @@ nav .nav-pc {
 nav .logo-btn {
   height: calc(50 * clamp(1.2px, 0.25vw, 1.8px));
   width: calc(60 * clamp(1.2px, 0.25vw, 1.8px));
-  margin: calc(10 * clamp(1.2px, 0.25vw, 1.8px));
+  margin: calc(10 * clamp(1.2px, 0.25vw, 1.8px)) calc(10 * clamp(1.2px, 0.25vw, 1.8px)) calc(10 * clamp(1.2px, 0.25vw, 1.8px)) calc(20 * clamp(1.2px, 0.25vw, 1.8px));
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transition: 0.6s;
@@ -60,7 +64,7 @@ nav .options {
       -ms-flex-align: center;
           align-items: center;
   gap: calc(10 * clamp(1.2px, 0.25vw, 1.8px));
-  margin-right: calc(10 * clamp(1.2px, 0.25vw, 1.8px));
+  margin-right: calc(20 * clamp(1.2px, 0.25vw, 1.8px));
 }
 nav .options .languages {
   display: -webkit-box;
@@ -417,6 +421,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .input-light {
   background-color: white;
+  color: black;
 }
 .input-light:focus {
   -webkit-box-shadow: 0 0 0 0.1em black;
@@ -503,6 +508,7 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
 
 .input-dark {
   background-color: black;
+  color: white;
 }
 .input-dark:focus {
   -webkit-box-shadow: 0 0 0 0.1em white;
@@ -591,4 +597,9 @@ nav .options .color-mode-btn .color-mode-inner.active::before {
   .form-text {
     width: min(80vw, 35em) !important;
   }
+}
+.invisible-div {
+  position: absolute;
+  margin: auto;
+  bottom: calc(65 * clamp(1.2px, 0.25vw, 1.8px));
 }

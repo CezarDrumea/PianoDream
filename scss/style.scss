@@ -35,6 +35,10 @@ $transitionTime: 0.6s;
   font-family: "Nunito";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   z-index: 1;
   backdrop-filter: blur(10px);
@@ -52,7 +56,7 @@ nav {
   .logo-btn {
     height: calc(50 * $clampGrow);
     width: calc(60 * $clampGrow);
-    margin: calc(10 * $clampGrow);
+    margin: calc(10 * $clampGrow) calc(10 * $clampGrow) calc(10 * $clampGrow) calc(20 * $clampGrow);
     background-repeat: no-repeat;
     background-size: contain;
     transition: $transitionTime;
@@ -65,7 +69,7 @@ nav {
   .options {
     @include displayFlex();
     gap: calc(10 * $clampGrow);
-    margin-right: calc(10 * $clampGrow);
+    margin-right: calc(20 * $clampGrow);
 
     .languages {
       @include displayFlex();
@@ -378,6 +382,7 @@ nav {
 
 .input-light {
   background-color: white;
+  color: black;
   &:focus {
     box-shadow: 0 0 0 0.1em black;
   }
@@ -467,6 +472,7 @@ nav {
 
 .input-dark {
   background-color: black;
+  color: white;
   &:focus {
     box-shadow: 0 0 0 0.1em white;
   }
@@ -555,4 +561,11 @@ nav {
   .form-text {
     width: min(80vw, 35em) !important;
   }
+}
+
+// scroll to elements
+.invisible-div {
+  position: absolute;
+  margin: auto;
+  bottom: calc(65 * $clampGrow);
 }
